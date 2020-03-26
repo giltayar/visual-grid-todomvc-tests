@@ -1,68 +1,88 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Visual Grid TodoMVC Storybook and Cypress Tests
 
-## Available Scripts
+This repository contains:
 
-In the project directory, you can run:
+* A complete implementation of TodoMVC (React+Redux)
+* Cypress and Storybook tests that visually test it using the Applitools Visual Grid.
 
-### `yarn start`
+## Installation
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone this repo, then run:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```sh
+npm install
+```
 
-### `yarn test`
+## Source Code
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* The source code for the TodoMVC app can be found in [`src`](src).
+* The source code for the TodoMVC storybook can be found in
+[`src/stories`](src/stories).
+* The source code for the Cypress Eyes test can be found in
+[`cypress/integration/todomvc_spec.js`](cypress/integration/todomvc_spec.js).
 
-### `yarn build`
+## Running the TodoMVC app
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To view the TodoMVC app, run:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```sh
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+and open <http://localhost:3000> (if the browser wasn't already opened for you).
 
-### `yarn eject`
+## Viewing the Storybook
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To view the TodoMVC Storybook, run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm run storybook
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+and open <http://localhost:9009> (if the browser wasn't already opened for you).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Testing
 
-## Learn More
+To run the Storybook Eyes tests and the Cypress Eyes tests, run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will run eslint, Storybook eyes, and the Cypress test in parallel
 
-### Code Splitting
+### Running the Cypress Tests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+To run just the Cypress Eyes tests, run:
 
-### Analyzing the Bundle Size
+```sh
+npm run test:cypress
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+To run the Cypress Eyes tests interactively, first run the application, using:
 
-### Making a Progressive Web App
+```sh
+npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+then run Cypress interactively, using:
 
-### Advanced Configuration
+```sh
+npx cypress
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Running the Storybook Eyes Tests
 
-### Deployment
+To run the Eyes Storybook test, run:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```sh
+npx eyes-storybook
+```
 
-### `yarn build` fails to minify
+## Building (optional and not necessary)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+To build production ready versions of the TodoMVC and its storybook, run:
+
+```sh
+npm run build
+```
