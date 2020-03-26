@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters'
 
@@ -25,11 +26,11 @@ class Footer extends Component {
     const { filter: selectedFilter, onShow } = this.props
 
     return (
-      <a className={classnames({ selected: filter === selectedFilter })}
+      <button className={classnames({ selected: filter === selectedFilter })}
          style={{ cursor: 'pointer' }}
          onClick={() => onShow(filter)}>
         {title}
-      </a>
+      </button>
     )
   }
 
