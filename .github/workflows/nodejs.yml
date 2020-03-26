@@ -6,7 +6,7 @@ on:
     - cron: '0 8 1 * *'
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
     container: cypress/browsers:node13.6.0-chrome80-ff72
 
