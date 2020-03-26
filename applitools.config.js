@@ -3,6 +3,7 @@ module.exports = {
   batchName: 'visual-grid-todomvc-test storybook',
   appName: 'visual-grid-todomvc-test storybook',
   appName: 'visual-grid-todomvc-test storybook',
+  puppeteerOptions: {args: ['--no-sandbox']},
   runInDocker: true,
   browser: [
     {width: 400, height: 500, name: 'chrome'},
