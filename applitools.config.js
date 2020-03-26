@@ -3,6 +3,7 @@ module.exports = {
   batchName: 'visual-grid-todomvc-test storybook',
   appName: 'visual-grid-todomvc-test storybook',
   appName: 'visual-grid-todomvc-test storybook',
+  runInDocker: !!process.env.CI,
   browser: [
     {width: 400, height: 500, name: 'chrome'},
     // {width: 1024, height: 768, name: 'chrome'},
