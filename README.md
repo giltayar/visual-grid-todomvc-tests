@@ -1,5 +1,7 @@
 # Visual Grid TodoMVC Storybook and Cypress Tests
 
+![build and test](https://github.com/giltayar/visual-grid-todomvc-tests/workflows/build%20and%20test/badge.svg)
+
 This repository contains:
 
 * A complete implementation of TodoMVC (React+Redux)
