@@ -81,6 +81,11 @@ To run the Eyes Storybook test, run:
 npx eyes-storybook
 ```
 
+## Github Actions
+
+You can view the Github workflow that builds and runs the Cypress and Storybook tests
+in Github actions at [`.github/workflows/nodejs.yml`](.github/workflows/nodejs.yml).
+
 ## Building (optional and not necessary)
 
 To build production ready versions of the TodoMVC and its storybook, run:
