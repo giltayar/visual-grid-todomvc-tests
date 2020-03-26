@@ -1,4 +1,5 @@
-import { createStore } from 'redux'
+/* global module,require */
+import {createStore} from 'redux'
 import rootReducer from '../reducers'
 
 export default function configureStore(initialState) {

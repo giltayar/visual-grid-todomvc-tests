@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": "plugin:react/recommended",
+  "plugins": ["prettier", "mocha-no-only"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/display-name": "off",
+    "no-warning-comments": ["warn", {"terms": ["fixme", "removeme", "xxx", "@@@"], "location": "anywhere"}],
+    "no-const-assign": "error",
+    "no-this-before-super": "error",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-vars": [
+      "error",
+      {"varsIgnorePattern": "^_", "args": "all", "argsIgnorePattern": "^_"}
+    ],
+    "constructor-super": "warn",
+    "valid-typeof": "warn",
+    "no-debugger": "error",
+    "mocha-no-only/mocha-no-only": "error"
+  }
+}
