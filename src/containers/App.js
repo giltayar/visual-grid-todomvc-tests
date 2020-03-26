@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     const { todos, actions } = this.props
     return (
-      <div>
+      <div class="todoapp">
         <Header addTodo={actions.addTodo} />
         <MainSection todos={todos} actions={actions} />
       </div>
