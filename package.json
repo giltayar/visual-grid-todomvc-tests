@@ -1,8 +1,9 @@
 {
-  "name": "visual-testing-at-speed-v2",
-  "version": "0.1.0",
-  "private": true,
+  "name": "visual-grid-todomvc-tests",
+  "version": "1.0.0",
   "dependencies": {
+    "@applitools/eyes-cypress": "^3.9.20",
+    "@applitools/eyes-storybook": "^3.3.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -17,12 +18,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "npm run eslint -- --fix",
-    "eslint": "eslint '**/*.js'",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build": "react-scripts build && npm run build-storybook",
+    "test": "BROWSER=none npm-run-all -p 'test:*'",
+    "test:cypress": "npm-run-all -p -r start cypress-run",
+    "test:eyes-storybook": "eyes-storybook",
+    "test:eslint": "npm run eslint -- --fix",
+    "cypress-run": "cypress run",
+    "eslint": "eslint 'src/**/*.js' 'cypress/**/*.js' 'selenium/**/*.js'",
+    "build-storybook": "build-storybook -s public",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,9 +50,14 @@
     "@storybook/addons": "^5.3.17",
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/react": "^5.3.17",
+    "chromedriver": "^80.0.1",
+    "cypress": "^4.2.0",
+    "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-mocha-no-only": "^1.1.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
-    "prettier": "^2.0.2"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.2",
+    "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }

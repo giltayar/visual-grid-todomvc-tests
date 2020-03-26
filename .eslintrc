@@ -1,13 +1,14 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "cypress/globals": true
   },
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "extends": "plugin:react/recommended",
-  "plugins": ["prettier", "mocha-no-only"],
+  "extends": ["plugin:react/recommended", "plugin:cypress/recommended"],
+  "plugins": ["prettier", "mocha-no-only", "cypress"],
   "rules": {
     "prettier/prettier": ["error"],
     "react/display-name": "off",
